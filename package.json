@@ -23,9 +23,10 @@
     ]
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "normalize.css": "^8.0.0",
-    "vue": "^2.5.16",
-    "babel-polyfill": "^6.26.0"
+    "nouislider": "^15.1.0",
+    "vue": "^2.5.16"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.6",

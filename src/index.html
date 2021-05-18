@@ -1,12 +1,933 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="сайт компании «Точно Мебель»">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hello World</title>
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous">
+  <title>Точно мебель</title>
 </head>
+
 <body>
 
+  <div class="wrapper">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__container">
+
+        <button class="header__open-btn button-reset">
+          <span class="visually-hidden">Меню</span>
+          <svg class="" width="24" height="24" viewBox="0 0 24 24">
+            <use xlink:href="#icon-burger"></use>
+          </svg>
+        </button>
+
+        <div class="header__wrapper">
+          <a class="header__logo" href="#!">
+            <picture>
+              <source media="(min-width: 1440px)"
+                srcset="${require('./common.blocks/header/header-logo-desktop.png')}, ${require('./common.blocks/header/header-logo-desktop@2x.png')} 2x">
+              <img class="header__logo-img" src="common.blocks/header/header-logo.png"
+                srcset="${require('./common.blocks/header/header-logo@2x.png')} 2x" width="80" height="40"
+                alt="Логотип компании «Точно Мебель»">
+            </picture>
+          </a>
+          <div class="header__form-wrapper">
+            <form class="header__form" action="#!" method="GET">
+              <input class="header__form-input" type="search" name="search" id="header-search"
+                placeholder="Поиск товара">
+              <label class="header__form-label" for="header-search">
+                <span class="visually-hidden">Поиск по сайту</span>
+                <svg class="" width="24" height="24" xml:space="preserve" viewBox="0 0 24 24">
+                  <use xlink:href="#icon-search"></use>
+                </svg>
+              </label>
+            </form>
+          </div>
+
+          <a class="header__phone" href="tel:+79876543210">
+            <span class="visually-hidden">позвонить в компанию «Точно Мебель»</span>
+            <svg class="" width="24" height="24" xml:space="preserve" viewBox="0 0 24 24">
+              <use xlink:href="#icon-phone"></use>
+            </svg>
+          </a>
+        </div>
+        <!-- MENU -->
+        <div class="header__menu menu">
+          <div class="menu__container">
+            <picture>
+              <img class="menu__logo-img" src="common.blocks/menu/menu-logo.png"
+                srcset="${require('./common.blocks/menu/menu-logo@2x.png')} 2x" width="80" height="40"
+                alt="Логотип компании «Точно Мебель»">
+            </picture>
+            <button class="header__close-btn menu__close-btn button-reset">
+              <span class="visually-hidden">Закрыть меню</span>
+              <svg class="" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="#icon-cross"></use>
+              </svg>
+            </button>
+
+            <nav class="menu__nav" role="navigation">
+              <ul class="menu__list list-reset">
+                <li class="menu__item menu__item--all">
+                  <a class="menu__link menu__link--all" href="#">
+                    <svg class="menu__item-icon" width="28" height="28" xml:space="preserve" viewBox="0 0 28 28">
+                      <use xlink:href="#icon-burger"></use>
+                    </svg>
+                    Вся мебель
+                  </a>
+                  <ul class="menu__list menu__list--sub list-reset">
+                    <li class="menu__item">
+                      <a class="menu__link" href="#">
+                        <svg class="menu__item-icon" width="28" height="28" xml:space="preserve" viewBox="0 0 28 28">
+                          <use xlink:href="#icon-soft"></use>
+                        </svg>
+                        Мягкая мебель
+                      </a>
+                    </li>
+                    <li class="menu__item">
+                      <a class="menu__link" href="#">
+                        <svg class="menu__item-icon" width="28" height="28" xml:space="preserve" viewBox="0 0 28 28">
+                          <use xlink:href="#icon-hallway"></use>
+                        </svg>
+                        Для прихожей
+                      </a>
+                    </li>
+                    <li class="menu__item"><a class="menu__link" href="#">
+                        Кухонная мебель
+                        <svg class="menu__item-icon" width="28" height="28" xml:space="preserve" viewBox="0 0 28 28">
+                          <use xlink:href="#icon-kitchen"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="menu__item"><a class="menu__link" href="#">
+                        Для гостиных
+                        <svg class="menu__item-icon" width="28" height="28" xml:space="preserve" viewBox="0 0 28 28">
+                          <use xlink:href="#icon-rooms"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="menu__item"><a class="menu__link" href="#">
+                        Столы
+                        <svg class="menu__item-icon" width="28" height="28" xml:space="preserve" viewBox="0 0 28 28">
+                          <use xlink:href="#icon-tables"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="menu__item"><a class="menu__link" href="#">
+                        Шкафы
+                        <svg class="menu__item-icon" width="28" height="28" xml:space="preserve" viewBox="0 0 28 28">
+                          <use xlink:href="#icon-wardrobes"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Выставочные залы</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">О нас</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Новости</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Отзывы</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link " href="#">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+
+            <a class="header__menu-phone menu__phone" href="tel:+79876543210">+7 987 654-32-10</a>
+            <p class="header__menu-chart menu__chart">Ежедневно с 09:00 – 20:00</p>
+            <a class="menu__mail" href="mailto:">example@example.ru</a>
+
+            <ul class="menu__social-list list-reset">
+              <li class="menu__social-item">
+                <a class="menu__social-link" href="#">
+                  <span class="visually-hidden">компания «Точно Мебель» в Инстаграм</span>
+                  <svg class="menu__social-icon" width="36" height="36" xml:space="preserve" viewBox="0 0 36 36">
+                    <use xlink:href="#icon-inst"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- END MENU -->
+      </div>
+    </header>
+    <!-- MAIN -->
+    <main class="main">
+      <h1 class="visually-hidden">Катог продукции компании «Точно Мебель»</h1>
+      <div class="main__wrapper">
+        <div class="main__container">
+          <!-- BREADCRUMBS -->
+          <ul class="main__breadcrumbs breadcrumbs list-reset">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link breadcrumbs__link--current" href="#">Мягкая мебель</a>
+            </li>
+          </ul>
+          <!--  END BREADCRUMBS -->
+
+          <h2 class="main__title">Мягкая мебель</h2>
+          <!-- MAIN GRID  -->
+          <div class="main__grid">
+            <!-- FILTER -->
+            <div class="main__filter filter">
+              <div class="main__filter-body filter__body">
+                <form class="filter__form" action="#" method="POST">
+                  <!-- FILTER HEADER -->
+                  <div class="filter__header">
+                    <a class="filter__header-link" href="#">
+                      <svg width="24" height="24" viewBox="0 0 24 24">
+                        <use xlink:href="#icon-triangle"></use>
+                      </svg>Мягкая мебель
+                    </a>
+                    <button class="main__filter-close filter__close button-reset" type="button">
+                      <span class="visually-hidden">Закрыть фильтр</span>
+                      <svg width="24" height="24" viewBox="0 0 24 24">
+                        <use xlink:href="#icon-cross"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- END FILTER HEADER -->
+                  <!-- FILTER CONTENT -->
+                  <div class="filter__container">
+                    <fieldset class="filter__fielset accordion">
+                      <div class="accordion__item" data-open="true">
+                        <h4 class="filter__fielset-title accordion__trigger">Категория
+                          <svg class="" width="24" height="24" viewBox="0 0 24 24">
+                            <use xlink:href="#icon-triangle"></use>
+                          </svg>
+                        </h4>
+                        <div class="accordion__content">
+                          <ul class="filter__list filter__list--categories list-reset ">
+                            <li class="filter__item">
+                              <input
+                                class="filter__input filter__input--categories filter__input--radio visually-hidden"
+                                type="radio" name="categories" id="soft" checked>
+                              <label class="filter__label filter__label--categories" for="soft">Мягкая мебель</label>
+                            </li>
+                            <li class="filter__item">
+                              <input
+                                class="filter__input filter__input--categories filter__input--radio visually-hidden"
+                                type="radio" name="categories" id="bag">
+                              <label class="filter__label filter__label--categories" for="bag">Кресла-мешки</label>
+                            </li>
+                            <li class="filter__item">
+                              <input
+                                class="filter__input filter__input--categories filter__input--radio visually-hidden"
+                                type="radio" name="categories" id="comp-chairs">
+                              <label class="filter__label filter__label--categories" for="comp-chairs">Компьютерные
+                                кресла</label>
+                            </li>
+                            <li class="filter__item">
+                              <input
+                                class="filter__input filter__input--categories filter__input--radio visually-hidden"
+                                type="radio" name="categories" id="chairs">
+                              <label class="filter__label filter__label--categories" for="chairs">Кресла</label>
+                            </li>
+                            <li class="filter__item">
+                              <input
+                                class="filter__input filter__input--categories filter__input--radio visually-hidden"
+                                type="radio" name="categories" id="ottomans">
+                              <label class="filter__label filter__label--categories" for="ottomans">Пуфики и
+                                банкетки</label>
+                            </li>
+                            <li class="filter__item">
+                              <input
+                                class="filter__input filter__input--categories filter__input--radio visually-hidden"
+                                type="radio" name="categories" id="beds">
+                              <label class="filter__label filter__label--categories" for="beds">Кровати и
+                                матрасы</label>
+                            </li>
+                            <li class="filter__item">
+                              <input
+                                class="filter__input filter__input--categories filter__input--radio visually-hidden"
+                                type="radio" name="categories" id="sofas">
+                              <label class="filter__label filter__label--categories" for="sofas">Диваны</label>
+                            </li>
+                            <li class="filter__item">
+                              <input
+                                class="filter__input filter__input--categories filter__input--radio visually-hidden"
+                                type="radio" name="categories" id="sets">
+                              <label class="filter__label filter__label--categories" for="sets">Комплекты мягкой
+                                мебели</label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset class="filter__fielset filter__fielset--price accordion">
+                      <div class="accordion__item" data-open="true">
+                        <h4 class="filter__fielset-title accordion__trigger">Цена
+                          <svg width="24" height="24" viewBox="0 0 24 24">
+                            <use xlink:href="#icon-triangle"></use>
+                          </svg>
+                        </h4>
+                        <div class="accordion__content">
+                          <div class="filter__price range">
+                            <div class="filter__range range__slider" id="price-range"></div>
+                            <div class="range__wrapper">
+                              <div class="range__input-wrapper">
+                                <input class="range__input " type="number" id="price-0" value="343 342">
+                                <label class="range__label" for="price-0">
+                                  <span class="visually-hidden">Цена от</span>
+                                </label>
+                              </div>
+                              <div class="range__input-wrapper">
+                                <input class="range__input" type="number" id="price-1" value="343 342">
+                                <label class="range__label" for="price-1">
+                                  <span class="visually-hidden">Цена до</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset class="filter__fielset filter__fielset--discount">
+                      <h4 class="filter__fielset-title">Товары со скидкой</h4>
+                      <div class="filter__discount">
+                        <input class="filter__input filter__input--discount filter__input--radio visually-hidden"
+                          type="checkbox" name="discount" id="discount" checked>
+                        <label class="filter__label filter__label--discount" for="discount">
+                          <span class="visually-hidden">Товары со скидкой</span>
+                        </label>
+                      </div>
+                    </fieldset>
+                    <fieldset class="filter__fielset filter__fielset--materials accordion">
+                      <div class="accordion__item" data-open="true">
+                        <h4 class="filter__fielset-title accordion__trigger">Материалы
+                          <svg class="" width="24" height="24" viewBox="0 0 24 24">
+                            <use xlink:href="#icon-triangle"></use>
+                          </svg>
+                        </h4>
+                        <div class="accordion__content">
+                          <ul class="filter__list filter__list--materials list-reset">
+                            <li class="filter__item">
+                              <input
+                                class="filter__input filter__input--materials filter__input--checkbox visually-hidden"
+                                type="checkbox" name="materials" id="abs">
+                              <label class="filter__label filter__label--materials" for="abs">ABS пластик</label>
+                            </li>
+                            <li class="filter__item">
+                              <input
+                                class="filter__input filter__input--materials filter__input--checkbox visually-hidden"
+                                type="checkbox" name="materials" id="amicor">
+                              <label class="filter__label filter__label--materials" for="amicor">Amicor TM</label>
+                            </li>
+                            <li class="filter__item">
+                              <input
+                                class="filter__input filter__input--materials filter__input--checkbox visually-hidden"
+                                type="checkbox" name="materials" id="eco" checked>
+                              <label class="filter__label filter__label--materials" for="eco">Eco Foam</label>
+                            </li>
+                            <li class="filter__item">
+                              <input
+                                class="filter__input filter__input--materials filter__input--checkbox visually-hidden"
+                                type="checkbox" name="materials" id="pla">
+                              <label class="filter__label filter__label--materials" for="pla">PLA пластик</label>
+                            </li>
+                            <li class="filter__item">
+                              <input
+                                class="filter__input filter__input--materials filter__input--checkbox visually-hidden"
+                                type="checkbox" name="materials" id="acrylic">
+                              <label class="filter__label filter__label--materials" for="acrylic">Акрил</label>
+                            </li>
+                            <li class="filter__item">
+                              <input
+                                class="filter__input filter__input--materials filter__input--checkbox visually-hidden"
+                                type="checkbox" name="materials" id="aluminum-alloy">
+                              <label class="filter__label filter__label--materials" for="aluminum-alloy">Алюминиевый
+                                сплав</label>
+                            </li>
+                            <li class="filter__item">
+                              <input
+                                class="filter__input filter__input--materials filter__input--checkbox visually-hidden"
+                                type="checkbox" name="materials" id="aluminum">
+                              <label class="filter__label filter__label--materials" for="aluminum">Алюминий</label>
+                            </li>
+                            <li class="filter__item">
+                              <input
+                                class="filter__input filter__input--materials filter__input--checkbox visually-hidden"
+                                type="checkbox" name="materials" id="bamboo">
+                              <label class="filter__label filter__label--materials" for="bamboo">Бамбук</label>
+                            </li>
+                          </ul>
+                          <button class="filter__more button-reset" type="button">Показать все</button>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset class="filter__fielset filter__fielset--height accordion">
+                      <div class="accordion__item" data-open="false">
+                        <h4 class="filter__fielset-title accordion__trigger">Высота, см
+                          <svg class="" width="24" height="24" viewBox="0 0 24 24">
+                            <use xlink:href="#icon-triangle"></use>
+                          </svg>
+                        </h4>
+                        <div class="accordion__content">
+                          <div class="filter__height range">
+                            <div class="filter__range range__slider" id="height-range"></div>
+                            <div class="range__wrapper">
+                              <div class="range__input-wrapper">
+                                <input class="range__input" type="number" id="height-0" value="1">
+                                <label class="range__label" for="height-0">
+                                  <span class="visually-hidden">Высота от</span>
+                                </label>
+                              </div>
+                              <div class="range__input-wrapper">
+                                <input class="range__input" type="number" id="height-1" value="240">
+                                <label class="range__label" for="height-1">
+                                  <span class="visually-hidden">Высота до</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset class="filter__fielset filter__fielset--length accordion">
+                      <div class="accordion__item" data-open="false">
+                        <h4 class="filter__fielset-title accordion__trigger">Длина, см
+                          <svg width="24" height="24" viewBox="0 0 24 24">
+                            <use xlink:href="#icon-triangle"></use>
+                          </svg>
+                        </h4>
+                        <div class="accordion__content">
+                          <div class="filter__length range">
+                            <div class="filter__range range__slider" id="length-range"></div>
+                            <div class="range__wrapper">
+                              <div class="range__input-wrapper">
+                                <input class="range__input " type="number" id="length-0" value="400">
+                                <label class="range__label" for="length-0">
+                                  <span class="visually-hidden">Высота от</span>
+                                </label>
+                              </div>
+                              <div class="range__input-wrapper">
+                                <input class="range__input" type="number" id="length-1" value="2000">
+                                <label class="range__label" for="length-1">
+                                  <span class="visually-hidden">Высота до</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+
+                  <!-- END FILTER CONTENT -->
+                </form>
+              </div>
+            </div>
+            <!-- END FILTER -->
+            <!-- CATALOG -->
+            <section class="main__catalog catalog">
+              <h2 class="visually-hidden">Католог мягкой мебели</h2>
+              <div class="tags">
+                <ul class="tags__list list-reset">
+                  <li class="tags__item">
+                    <a class="tags__link" href="#">Материалы: Eco Foam
+                      <svg class="tags__icon" width="24" height="24" xml:space="preserve" viewBox="0 0 24 24">
+                        <use xlink:href="#icon-cross"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="tags__item">
+                    <a class="tags__link" href="#">Цвет: Бирюзовый
+                      <svg class="tags__icon" width="24" height="24" xml:space="preserve" viewBox="0 0 24 24">
+                        <use xlink:href="#icon-cross"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="tags__item">
+                    <a class="tags__link" href="#">Длина, см: от 400 до 2000
+                      <svg class="tags__icon" width="24" height="24" xml:space="preserve" viewBox="0 0 24 24">
+                        <use xlink:href="#icon-cross"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+
+                <button class="tags__reset button-reset">Очистить все</button>
+              </div>
+
+              <div class="catalog__filter-wrapper">
+                <button class="main__filter-open button-reset">
+                  <svg width="24" height="24" xml:space="preserve" viewBox="0 0 24 24">
+                    <use xlink:href="#icon-filter"></use>
+                  </svg>
+                  Фильтр
+                </button>
+              </div>
+
+              <!-- CATALOG LIST -->
+
+              <ul class="catalog__list list-reset">
+                <!-- 1 -->
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <article class="product">
+                      <picture>
+                        <source media="(min-width: 1440px)"
+                          srcset="${require('./common.blocks/product/product01-desktop.jpg')}, ${require('./common.blocks/product/product01-desktop@2x.jpg')} 2x">
+                        <img class="product__img" width="136" height="124"
+                          src="./common.blocks/product/product01-mobile.jpg"
+                          srcset="${require('./common.blocks/product/product01-mobile@2x.jpg')} 2x"
+                          alt="Диван-кровать Вилли Рогожка, розовый">
+                      </picture>
+
+                      <div class="product__wrapper">
+                        <h3 class="product__title">Диван-кровать Вилли Рогожка, розовый</h3>
+                        <p class="product__price"><span class="product__price-current">4234 ₽</span> <span
+                            class="product__price-old">21
+                            000 ₽</span></p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <!-- 2 -->
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <article class="product">
+                      <picture>
+                        <source media="(min-width: 1440px)"
+                          srcset="${require('./common.blocks/product/product02-desktop.jpg')}, ${require('./common.blocks/product/product02-desktop@2x.jpg')} 2x">
+                        <img class="product__img" width="136" height="124"
+                          src="./common.blocks/product/product02-mobile.jpg"
+                          srcset="${require('./common.blocks/product/product02-mobile@2x.jpg')} 2x"
+                          alt="Диван-кровать Шарм-Дизайн ЕвроШарм серый с беж">
+                      </picture>
+                      <div class="product__wrapper">
+                        <h3 class="product__title">Диван-кровать Шарм-Дизайн ЕвроШарм серый&nbsp; с беж</h3>
+                        <p class="product__price"><span class="product__price-current">12 244 ₽</span> <span
+                            class="product__price-old">21
+                            000
+                            ₽</span></p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <!-- 3 -->
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <article class="product">
+                      <picture>
+                        <source media="(min-width: 1440px)"
+                          srcset="${require('./common.blocks/product/product03-desktop.jpg')}, ${require('./common.blocks/product/product03-desktop@2x.jpg')} 2x">
+                        <img class="product__img" width="136" height="124"
+                          src="./common.blocks/product/product03-mobile.jpg"
+                          srcset="${require('./common.blocks/product/product03-mobile@2x.jpg')} 2x"
+                          alt="Шкаф Guocai CBME12035 Бежевый, бежевый, белый">
+                      </picture>
+                      <div class="product__wrapper">
+                        <h3 class="product__title">Шкаф Guocai CBME12035 Бежевый, бежевый, белый</h3>
+                        <p class="product__price"><span class="product__price-current">7000 ₽</span> <span
+                            class="product__price-old">21
+                            000
+                            ₽</span></p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <!-- 4 -->
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <article class="product">
+                      <picture>
+                        <source media="(min-width: 1440px)"
+                          srcset="${require('./common.blocks/product/product02-desktop.jpg')}, ${require('./common.blocks/product/product02-desktop@2x.jpg')} 2x">
+                        <img class="product__img" width="136" height="124"
+                          src="./common.blocks/product/product02-mobile.jpg"
+                          srcset="${require('./common.blocks/product/product02-mobile@2x.jpg')} 2x"
+                          alt="Диван-кровать Шарм-Дизайн ЕвроШарм серый с беж">
+                      </picture>
+                      <div class="product__wrapper">
+                        <h3 class="product__title">Диван-кровать Шарм-Дизайн ЕвроШарм серый&nbsp; с беж</h3>
+                        <p class="product__price"><span class="product__price-current">12 244 ₽</span> <span
+                            class="product__price-old">21
+                            000
+                            ₽</span></p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <!-- 5 -->
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <article class="product">
+                      <picture>
+                        <source media="(min-width: 1440px)"
+                          srcset="${require('./common.blocks/product/product04-desktop.jpg')}, ${require('./common.blocks/product/product04-desktop@2x.jpg')} 2x">
+                        <img class="product__img" width="136" height="124"
+                          src="./common.blocks/product/product04-mobile.jpg"
+                          srcset="${require('./common.blocks/product/product04-mobile@2x.jpg')} 2x"
+                          alt="Шкаф Guocai CBME12035 Бежевый, бежевый, белый">
+                      </picture>
+                      <div class="product__wrapper">
+                        <h3 class="product__title">Шкаф Guocai CBME12035 Бежевый, бежевый, белый</h3>
+                        <p class="product__price"><span class="product__price-current">4234 ₽</span> <span
+                            class="product__price-old">21
+                            000
+                            ₽</span></p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <!-- 6 -->
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <article class="product">
+                      <picture>
+                        <source media="(min-width: 1440px)"
+                          srcset="${require('./common.blocks/product/product03-desktop.jpg')}, ${require('./common.blocks/product/product03-desktop@2x.jpg')} 2x">
+                        <img class="product__img" width="136" height="124"
+                          src="./common.blocks/product/product03-mobile.jpg"
+                          srcset="${require('./common.blocks/product/product03-mobile@2x.jpg')} 2x"
+                          alt="Шкаф Guocai CBME12035 Бежевый, бежевый, белый">
+                      </picture>
+                      <div class="product__wrapper">
+                        <h3 class="product__title">Шкаф Guocai CBME12035 Бежевый, бежевый, белый</h3>
+                        <p class="product__price"><span class="product__price-current">7000 ₽</span> <span
+                            class="product__price-old">21
+                            000
+                            ₽</span></p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <!-- 7 -->
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <article class="product">
+                      <picture>
+                        <source media="(min-width: 1440px)"
+                          srcset="${require('./common.blocks/product/product04-desktop.jpg')}, ${require('./common.blocks/product/product04-desktop@2x.jpg')} 2x">
+                        <img class="product__img" width="136" height="124"
+                          src="./common.blocks/product/product04-mobile.jpg"
+                          srcset="${require('./common.blocks/product/product04-mobile@2x.jpg')} 2x"
+                          alt="Шкаф Guocai CBME12035 Бежевый, бежевый, белый">
+                      </picture>
+                      <div class="product__wrapper">
+                        <h3 class="product__title">Шкаф Guocai CBME12035 Бежевый, бежевый, белый</h3>
+                        <p class="product__price"><span class="product__price-current">4234 ₽</span> <span
+                            class="product__price-old">21
+                            000
+                            ₽</span></p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <!-- 8 -->
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <article class="product">
+                      <picture>
+                        <source media="(min-width: 1440px)"
+                          srcset="${require('./common.blocks/product/product03-desktop.jpg')}, ${require('./common.blocks/product/product03-desktop@2x.jpg')} 2x">
+                        <img class="product__img" width="136" height="124"
+                          src="./common.blocks/product/product03-mobile.jpg"
+                          srcset="${require('./common.blocks/product/product03-mobile@2x.jpg')} 2x"
+                          alt="Шкаф Guocai CBME12035 Бежевый, бежевый, белый">
+                      </picture>
+                      <div class="product__wrapper">
+                        <h3 class="product__title">Шкаф Guocai CBME12035 Бежевый, бежевый, белый</h3>
+                        <p class="product__price"><span class="product__price-current">7000 ₽</span> <span
+                            class="product__price-old">21
+                            000
+                            ₽</span></p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <!-- 9 -->
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <article class="product">
+                      <picture>
+                        <source media="(min-width: 1440px)"
+                          srcset="${require('./common.blocks/product/product02-desktop.jpg')}, ${require('./common.blocks/product/product02-desktop@2x.jpg')} 2x">
+                        <img class="product__img" width="136" height="124"
+                          src="./common.blocks/product/product02-mobile.jpg"
+                          srcset="${require('./common.blocks/product/product02-mobile@2x.jpg')} 2x"
+                          alt="Диван-кровать Шарм-Дизайн ЕвроШарм серый с беж">
+                      </picture>
+                      <div class="product__wrapper">
+                        <h3 class="product__title">Диван-кровать Шарм-Дизайн ЕвроШарм серый&nbsp; с беж</h3>
+                        <p class="product__price"><span class="product__price-current">12 244 ₽</span> <span
+                            class="product__price-old">21
+                            000
+                            ₽</span></p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <!-- 10 -->
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <article class="product">
+                      <picture>
+                        <source media="(min-width: 1440px)"
+                          srcset="${require('./common.blocks/product/product03-desktop.jpg')}, ${require('./common.blocks/product/product03-desktop@2x.jpg')} 2x">
+                        <img class="product__img" width="136" height="124"
+                          src="./common.blocks/product/product03-mobile.jpg"
+                          srcset="${require('./common.blocks/product/product03-mobile@2x.jpg')} 2x"
+                          alt="Шкаф Guocai CBME12035 Бежевый, бежевый, белый">
+                      </picture>
+                      <div class="product__wrapper">
+                        <h3 class="product__title">Шкаф Guocai CBME12035 Бежевый, бежевый, белый</h3>
+                        <p class="product__price"><span class="product__price-current">7000 ₽</span> <span
+                            class="product__price-old">21
+                            000
+                            ₽</span></p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <!-- 11 -->
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <article class="product">
+                      <picture>
+                        <source media="(min-width: 1440px)"
+                          srcset="${require('./common.blocks/product/product02-desktop.jpg')}, ${require('./common.blocks/product/product02-desktop@2x.jpg')} 2x">
+                        <img class="product__img" width="136" height="124"
+                          src="./common.blocks/product/product02-mobile.jpg"
+                          srcset="${require('./common.blocks/product/product02-mobile@2x.jpg')} 2x"
+                          alt="Диван-кровать Шарм-Дизайн ЕвроШарм серый с беж">
+                      </picture>
+                      <div class="product__wrapper">
+                        <h3 class="product__title">Диван-кровать Шарм-Дизайн ЕвроШарм серый&nbsp; с беж</h3>
+                        <p class="product__price"><span class="product__price-current">12 244 ₽</span> <span
+                            class="product__price-old">21
+                            000
+                            ₽</span></p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <!-- 12 -->
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <article class="product">
+                      <picture>
+                        <source media="(min-width: 1440px)"
+                          srcset="${require('./common.blocks/product/product04-desktop.jpg')}, ${require('./common.blocks/product/product04-desktop@2x.jpg')} 2x">
+                        <img class="product__img" width="136" height="124"
+                          src="./common.blocks/product/product04-mobile.jpg"
+                          srcset="${require('./common.blocks/product/product04-mobile@2x.jpg')} 2x"
+                          alt="Шкаф Guocai CBME12035 Бежевый, бежевый, белый">
+                      </picture>
+                      <div class="product__wrapper">
+                        <h3 class="product__title">Шкаф Guocai CBME12035 Бежевый, бежевый, белый</h3>
+                        <p class="product__price"><span class="product__price-current">4234 ₽</span> <span
+                            class="product__price-old">21
+                            000
+                            ₽</span></p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <!-- 13 -->
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <article class="product">
+                      <picture>
+                        <source media="(min-width: 1440px)"
+                          srcset="${require('./common.blocks/product/product03-desktop.jpg')}, ${require('./common.blocks/product/product03-desktop@2x.jpg')} 2x">
+                        <img class="product__img" width="136" height="124"
+                          src="./common.blocks/product/product03-mobile.jpg"
+                          srcset="${require('./common.blocks/product/product03-mobile@2x.jpg')} 2x"
+                          alt="Шкаф Guocai CBME12035 Бежевый, бежевый, белый">
+                      </picture>
+                      <div class="product__wrapper">
+                        <h3 class="product__title">Шкаф Guocai CBME12035 Бежевый, бежевый, белый</h3>
+                        <p class="product__price"><span class="product__price-current">7000 ₽</span> <span
+                            class="product__price-old">21
+                            000
+                            ₽</span></p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <!-- 14 -->
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <article class="product">
+                      <picture>
+                        <source media="(min-width: 1440px)"
+                          srcset="${require('./common.blocks/product/product04-desktop.jpg')}, ${require('./common.blocks/product/product04-desktop@2x.jpg')} 2x">
+                        <img class="product__img" width="136" height="124"
+                          src="./common.blocks/product/product04-mobile.jpg"
+                          srcset="${require('./common.blocks/product/product04-mobile@2x.jpg')} 2x"
+                          alt="Шкаф Guocai CBME12035 Бежевый, бежевый, белый">
+                      </picture>
+                      <div class="product__wrapper">
+                        <h3 class="product__title">Шкаф Guocai CBME12035 Бежевый, бежевый, белый</h3>
+                        <p class="product__price"><span class="product__price-current">4234 ₽</span> <span
+                            class="product__price-old">21
+                            000
+                            ₽</span></p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+                <!-- 15 -->
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <article class="product">
+                      <picture>
+                        <source media="(min-width: 1440px)"
+                          srcset="${require('./common.blocks/product/product02-desktop.jpg')}, ${require('./common.blocks/product/product02-desktop@2x.jpg')} 2x">
+                        <img class="product__img" width="136" height="124"
+                          src="./common.blocks/product/product02-mobile.jpg"
+                          srcset="${require('./common.blocks/product/product02-mobile@2x.jpg')} 2x"
+                          alt="Диван-кровать Шарм-Дизайн ЕвроШарм серый с беж">
+                      </picture>
+                      <div class="product__wrapper">
+                        <h3 class="product__title">Диван-кровать Шарм-Дизайн ЕвроШарм серый&nbsp; с беж</h3>
+                        <p class="product__price"><span class="product__price-current">12 244 ₽</span> <span
+                            class="product__price-old">21
+                            000
+                            ₽</span></p>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- PAGINATION -->
+              <!-- <div class="catalog__pagination pagination">
+                <ul class="pagination__list list-reset">
+                  <li class="pagination__item">
+                    <a class="pagination__link pagination__link--current" href="#">1</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#">2</a>
+                  </li>
+                </ul>
+
+                <button class="pagination__show-more button-reset">
+                  <span class="visually-hidden">Показать еще</span>
+                  <svg class="" width="24" height="24" xml:space="preserve" viewBox="0 0 24 24">
+                    <use xlink:href="#icon-arrow"></use>
+                  </svg>
+                </button>
+              </div> -->
+              <!-- END PAGINATION -->
+              <!-- END CATALOG LIST -->
+            </section>
+            <!-- END CATALOG -->
+          </div>
+          <!-- END MAIN GRID -->
+        </div>
+
+        <!-- ABOUT -->
+        <section class="about">
+          <div class="about__container">
+            <h2 class="about__title">Мягкая мебель</h2>
+            <p class="about__text">Наша компания организует оптовые поставки любой сложности. Мы изготовим и доставим
+              заказ
+              согласно вашему требованию и
+              предподчениям.</p>
+            <p class="about__text">Мы несём полную ответственнсть за качество и сроки поставки. Опираясь на наш опыт ,мы
+              можем организовать сделку любой
+              сложности. Мы стремимся удовлетворить спрос самого взыскательного покупателя, поэтому модельный ряд нашей
+              продукции
+              ежегодно пополняется новыми моделями.</p>
+            <p class="about__text">Благодаря передовым технологиям и оригинальным дизайнерским решениям мы стали
+              признанным лидером <br> в производстве
+              корпусной мебели для дома и офиса.</p>
+            <p class="about__text">Наша компания регулярно участвует в мебельных выставках.</p>
+          </div>
+        </section>
+        <!-- END ABOUT -->
+      </div>
+    </main>
+    <!-- END MAIN -->
+  </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__container">
+
+        <div class="footer__grid-center">
+          <div class="footer__nav">
+            <div class="footer__nav-catalog">
+              <h4 class="footer__nav-title">Каталог</h4>
+              <ul class="footer__nav-list footer__nav-list--catalog list-reset">
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#"> Мягкая мебель</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#"> Для прихожей</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#"> Кухонная мебель</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#"> Столы</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#"> Для гостиных</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#"> Шкафы</a></li>
+              </ul>
+            </div>
+
+            <div class="footer__nav-shop">
+              <h4 class="footer__nav-title">Магазин</h4>
+              <ul class="footer__nav-list list-reset">
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#"> Выставочные залы</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#"> О нас</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#"> Новости</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#"> Отзывы</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#"> Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <div class="footer__grid-right">
+          <address class="footer__address">
+            <a class="footer__phone" href="tel:+79876543210">+7 987 654-32-10</a>
+            <p class="footer__chart">Ежедневно с 09:00 – 20:00</p>
+            <a class="footer__mail" href="mailto:">example@example.ru</a>
+
+            <ul class="footer__social-list list-reset">
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="#">
+                  <span class="visually-hidden">компания «Точно Мебель» в Инстаграм</span>
+                  <svg class="footer__social-icon" width="42" height="42" xml:space="preserve" viewBox="0 0 42 42">
+                    <use xlink:href="#icon-inst"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="footer__grid-left">
+          <a class="footer__logo" href="#">
+            <picture>
+              <img src="common.blocks/footer/logo-footer.png"
+                srcset="${require('./common.blocks/footer/logo-footer@2x.png')} 2x" width="160" height="80"
+                alt="Логотип компании «Точно Мебель»">
+            </picture>
+          </a>
+          <p class="footer__city">
+            Россия, г. Рузаевка, ул. Карла Маркса, 16-г,
+          </p>
+          <a class="footer__privacy" href="#">Политика конфиденциальности</a>
+        </div>
+        <p class="footer__copyright">Точно Мебель — магазин мебели, 2020</p>
+        <p class="footer__production">Сделано в <a class="footer__production-link" href="#">OnlineBees</a></p>
+      </div>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+
 </body>
+
 </html>

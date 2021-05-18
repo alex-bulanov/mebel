@@ -1,9 +1,31 @@
 @import (reference) './variables.less';
 
-html {
-  color: @color-text;
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Regular.woff2") format("woff2"), url("../assets/fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-  font: 16px Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../assets/fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font: 16px "Montserrat", Arial, Helvetica, sans-serif;
+  color: @text-color;
 }
 
 h1,
@@ -25,4 +47,40 @@ a {
   text-decoration: none;
 
   color: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  appearance: none;
+  cursor: pointer;
+}
+
+.list-reset {
+  padding: 0;
+  list-style: none;
+}
+
+.lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  max-width: 1440px;
+  // width: 320px;
+  margin: 0 auto;
 }

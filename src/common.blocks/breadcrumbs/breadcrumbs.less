@@ -1,0 +1,59 @@
+@import (reference) '../../less/variables.less';
+
+.breadcrumbs {
+  display: flex;
+}
+
+.breadcrumbs__item {
+  margin-right: 4px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.breadcrumbs__link {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  line-height: 18px;
+  color: @secondary-text-color;
+
+  &::after {
+    content: ">";
+    display: inline-block;
+    margin-left: 3px;
+    color: currentColor;
+  }
+
+  &--current {
+    color: @text-color;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: @desktop) { 
+  .breadcrumbs__link {
+    font-size: 14px;
+    line-height: 20px;
+    color: @secondary-text-color;
+
+    &::after {
+      content: ">";
+      display: inline-block;
+      margin-left: 3px;
+      color: currentColor;
+    }
+
+    &--current {
+      color: @text-color;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

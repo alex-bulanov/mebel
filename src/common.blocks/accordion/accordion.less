@@ -1,0 +1,35 @@
+@import (reference) '../../less/variables.less';
+
+
+.accordion--active .accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: @transition;
+}
+
+.accordion__item--show .accordion__content {
+  max-height: 100%;
+  visibility: visible;
+  transition: @transition;
+}
+
+.accordion__item .accordion__trigger {
+  transition: @transition;
+  svg {
+    display: none;
+    transform: rotate(-90deg);
+  }
+}
+
+.accordion--active .accordion__trigger {
+  svg {
+    display: block;
+  }
+}
+
+.accordion__item--show .accordion__trigger {
+  svg {
+    transform: rotate(90deg);
+  }
+}

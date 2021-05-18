@@ -1,0 +1,78 @@
+@import (reference) '../../less/variables.less';
+
+.tags {
+  padding-bottom: 24px;
+}
+
+.tags__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+  margin: 0 0 12px;
+}
+
+.tags__link {
+  position: relative;
+  display: inline-flex;
+  border-radius: 4px;
+  padding: 7px 44px 5px 13px;
+  font-size: 14px;
+  line-height: 20px;
+  color: @white-color;
+  white-space: nowrap;
+  background-color: @main-color;
+  box-shadow: 0px 4px 4px rgba(50, 50, 71, 0.08), 0px 4px 8px rgba(50, 50, 71, 0.06);
+  transition: @transition;
+
+  &:hover,
+  &:focus {
+    background-color: @middle-main-color;
+  }
+
+  &:active {
+    background-color: @light-main-color;
+  }
+}
+
+.tags__icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+}
+
+.tags__reset {
+  border-bottom: 1px dashed currentColor;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  color: @secondary-text-color;
+  transition: @transition;
+
+  &:hover,
+  &:focus {
+    color: @main-color;
+  }
+
+  &:active {
+    color: @main-color;
+  }
+}
+
+@media (min-width: @desktop) {
+  .tags {
+    display: flex;
+    align-items: center;
+    padding-bottom: 23px;
+  }
+
+  .tags__list {
+    width: 664px;
+    margin: 0 10px 0 0;
+  }
+
+  .tags__link {
+    padding: 6px 44px 6px 13px;
+  }
+}

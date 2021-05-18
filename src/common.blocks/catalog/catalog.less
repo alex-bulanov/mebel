@@ -1,0 +1,42 @@
+@import (reference) '../../less/variables.less';
+
+.catalog__filter-wrapper {
+  margin-bottom: 18px;
+}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  border-top: 2px solid @light-grey-color;
+  padding: 24px 0;
+}
+
+@media (min-width: @desktop) {
+  .catalog {
+    padding-top: 14px;
+  }
+
+  .catalog__filter-wrapper {
+    display: none;
+  }
+
+  .catalog__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 48px;
+    border-top: none;
+    padding: 0;
+  }
+
+  .catalog__link {
+    display: flex;
+    padding: 17px 0 16px;
+    transition: @transition;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 20px 20px rgba(50, 50, 71, 0.12), 0px 32px 40px rgba(50, 50, 71, 0.12);
+    }
+  }
+}
